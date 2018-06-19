@@ -1,5 +1,8 @@
 <!--index.wxml-->
 <view class="container">
+<view class='header'>
+sdfsadfsadf
+</view>
  <scroll-view scroll-x>
     <view>
         <image  src=""></image>

@@ -5,8 +5,8 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#000000",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "泰福利",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
@@ -17,15 +17,15 @@
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "text": "家园"
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "text": "福利"
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "text": "我的"
       }
     ]
   }
