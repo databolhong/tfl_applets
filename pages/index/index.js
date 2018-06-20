@@ -7,12 +7,17 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
+    nav: 'home',
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
+  navTap (event) {
+    // console.log(event)
+    this.setData({
+      nav: event.currentTarget.dataset.nav
+    })
+    wx.showToast({
+      title: event.currentTarget.dataset.nav
     })
   },
   onLoad: function () {

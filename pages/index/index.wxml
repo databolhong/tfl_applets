@@ -3,11 +3,13 @@
 <view class='header box-flex'>
   <view class='flex message'><icon size="18" type="info"/></view>
   <view class='box-flex flex nav'>
-    <view class="flex active">
+    <view bind:tap="navTap" data-nav="home" class="flex {{nav === 'home' ? 'active' : ''}}">
         <view>首页</view>
         <view class="after"></view>
     </view>
-    <view class="flex">达人榜</view>
+    <view bind:tap="navTap" data-nav="talent" class="flex {{nav === 'talent' ? 'active' : ''}}">
+      <view>达人榜</view>
+      <view class="after"></view></view>
   </view>
   <view class='flex search'><icon size="18" type="search"/></view>
 </view>
