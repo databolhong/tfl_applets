@@ -1,8 +1,40 @@
 /**index.wxss**/
+.container {
+  padding-top: 60rpx;
+}
 .header {
   position: fixed;
   top: 0;
   left: 0;
-  height: 40rpx;
-  background-color: red
+  right: 0;
+  padding: 10rpx 0 5rpx;
+  box-shadow: 0 0 3rpx rgba(0, 0, 0, .1)
+}
+.header .nav {
+  font-size: 32rpx;
+}
+.header .nav > view {
+  position: relative;
+  color: #999999;
+}
+.header .nav .active {
+  color: #666666;
+ }
+.nav .active .after{
+  position: absolute;
+  bottom: -5rpx;
+  left: 50%;
+  width: 36rpx;
+  height: 6rpx;
+  border-radius: 3rpx;
+  transform: translateX(-50%);
+  background-color: green;
+}
+.header .message {
+  text-align: left;
+  padding-left: 16rpx;
+}
+.header .search {
+  padding-right: 16rpx;
+  text-align: right;
 }
