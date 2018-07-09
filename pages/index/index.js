@@ -7,19 +7,18 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    nav: 'home',
+    nav: 'index',
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
   navTap (event) {
-    // console.log(event)
+    console.log(event)
     this.setData({
       nav: event.currentTarget.dataset.nav
     })
     wx.showToast({
       title: event.currentTarget.dataset.nav
     })
-      wx
   },
   onLoad: function () {
     if (app.globalData.userInfo) {

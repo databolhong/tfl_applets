@@ -65,6 +65,8 @@ page {
 .img-arrow-right {
   width: 14rpx;
   height: 26rpx;
+  vertical-align: sub;
+  padding-bottom: 4rpx;
 }
 .items-title-description {
   color: #99A9BD;
