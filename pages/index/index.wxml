@@ -1,21 +1,30 @@
 <!--index.wxml-->
 <view class="container">
-<view class='header box-flex'>
-  <view class='flex message'><icon size="18" type="info"/></view>
-  <view class='box-flex flex nav'>
-    <view bind:tap="navTap" data-nav="home" class="flex {{nav === 'home' ? 'active' : ''}}">
-      <view>首页</view>
-      <view class="after"></view>
+  <view class='header box-flex'>
+    <view class='flex message'><icon size="18" type="info"/></view>
+    <view class='box-flex flex header-nav'>
+      <view bind:tap="navTap" data-nav="home" class="flex header-nav-view {{nav === 'home' ? 'header-nav-active' : ''}}">
+        <view>首页</view>
+        <view class=".header-nav-active-after"></view>
+      </view>
+      <view bind:tap="navTap" data-nav="talent" class="flex header-nav-view {{nav === 'talent' ? 'header-nav-active' : ''}}">
+        <view>达人榜</view>
+        <view class=".header-nav-active-after"></view></view>
     </view>
-    <view bind:tap="navTap" data-nav="talent" class="flex {{nav === 'talent' ? 'active' : ''}}">
-      <view>达人榜</view>
-      <view class="after"></view></view>
+    <view class='flex search'><icon size="18" type="search"/></view>
   </view>
-  <view class='flex search'><icon size="18" type="search"/></view>
-</view>
-  <scroll-view scroll-x>
-    <view>
-      <image src=""></image>
+  <view class="items">
+    <view class="items-title box-flex">
+      <text class="items-title-text" >泰康养老保险</text>
+      <view class="items-title-more">
+        <text>查看全部 </text><image class="img-arrow-right" mode="aspectFill" src="/images/arrow-right.png"></image>
+      </view>
     </view>
-  </scroll-view>
+    <view class="items-title-description">泰康，全心为您</view>
+    <scroll-view scroll-x>
+      <view>
+        <image lazy-load="true" mode="widthFix" src=""></image>
+      </view>
+    </scroll-view>
+  </view>
 </view>

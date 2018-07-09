@@ -19,6 +19,7 @@ Page({
     wx.showToast({
       title: event.currentTarget.dataset.nav
     })
+      wx
   },
   onLoad: function () {
     if (app.globalData.userInfo) {

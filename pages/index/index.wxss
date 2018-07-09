@@ -1,40 +1,75 @@
 /**index.wxss**/
+page {
+  box-sizing: border-box;
+}
 .container {
-  padding-top: 60rpx;
+  padding-top: 90rpx;
 }
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  padding: 10rpx 0 5rpx;
-  box-shadow: 0 4rpx 3rpx rgba(0, 0, 0, .1)
+  padding: 10rpx 0;
+  box-shadow: 0 4rpx 3rpx rgba(0, 0, 0, .1);
+  background-color: #ffffff;
 }
-.header .nav {
-  font-size: 32rpx;
+.header-nav {
+  font-size: 36rpx;
 }
-.header .nav > view {
+.header-nav-view {
   position: relative;
-  color: #999999;
+  color: #8E9FB4;
 }
-.header .nav .active {
-  color: #666666;
+.header-nav-active {
+  color: #373E4B;
  }
-.nav .active .after{
+.header-nav-active-after{
   position: absolute;
-  bottom: -2rpx;
+  bottom: -8rpx;
   left: 50%;
-  width: 36rpx;
-  height: 6rpx;
-  border-radius: 3rpx;
+  width: 32rpx;
+  height: 8rpx;
+  border-radius: 4rpx;
   transform: translateX(-50%);
-  background-color: green;
+  background: linear-gradient(to right, #26EFA5, #26D0B1);
 }
-.header .message {
+.message {
   text-align: left;
   padding-left: 16rpx;
 }
-.header .search {
+.search {
   padding-right: 16rpx;
   text-align: right;
+}
+.items {
+  width: 100%;
+  overflow: hidden;
+}
+.items-title {
+  width: 650rpx;
+  line-height: 60rpx;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: auto;
+}
+.items-title-text {
+  color: #373E4B;
+  font-size: 44rpx;
+  font-weight: 500;
+}
+.items-title-more {
+  color: #16D59A;
+  font-size: 28rpx;
+}
+.img-arrow-right {
+  width: 14rpx;
+  height: 26rpx;
+}
+.items-title-description {
+  color: #99A9BD;
+  line-height: 40rpx;
+  text-align: left;
+  padding-left: 50rpx;
+  font-size: 28rpx;
 }
