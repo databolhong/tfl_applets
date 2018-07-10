@@ -15,3 +15,10 @@
 .flex {
   flex: 1
 }
+.scroll-nowrap {
+  width: 100%;
+  white-space: nowrap;
+}
+.box-inlineBlock {
+  display: inline-block;
+}

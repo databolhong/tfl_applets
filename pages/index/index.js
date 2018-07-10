@@ -8,6 +8,69 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     nav: 'index',
+    dataItems: [
+      {
+        title: '泰康养老保险',
+        description: '泰康 #全心为您',
+        product_id: '',
+        items: [
+          {
+            code: '123',
+            txt: '健康有约保障计划2018',
+            img_url: '/images/index/a1.png',
+            price: 42.00, // 当前价格
+            org_price: 42.00, // 活动前价格
+            show_price_qi: true // 是否显示起
+          },
+          {
+            code: '123',
+            txt: '汇享有约保险计划2018',
+            img_url: '/images/index/a1.png',
+            price: 5000.00, // 当前价格
+            org_price: 5000.00, // 活动前价格
+            show_price_qi: true // 是否显示起
+          },
+          {
+            code: '123',
+            txt: '泰康e保有约住院医疗',
+            img_url: '/images/index/a1.png',
+            price: 126.00, // 当前价格
+            org_price: 126.00, // 活动前价格
+            show_price_qi: false // 是否显示起
+          }
+        ]
+      },
+      {
+        title: '好物',
+        description: '网易严选 #好的生活没那么贵',
+        items: [
+          {
+            code: '123',
+            txt: '100年传世珐琅锅 马卡龙系列',
+            img_url: '/images/index/a4.png',
+            price: 434.00, // 当前价格
+            org_price: 999.00, // 活动前价格
+            show_price_qi: false // 是否显示起
+          },
+          {
+              code: '123',
+              txt: '100年传世珐琅锅 马卡龙系列',
+              img_url: '/images/index/a4.png',
+              price: 434.00, // 当前价格
+              org_price: 999.00, // 活动前价格
+              show_price_qi: false // 是否显示起
+          },
+          {
+              code: '123',
+              txt: '100年传世珐琅锅 马卡龙系列',
+              img_url: '/images/index/a4.png',
+              price: 434.00, // 当前价格
+              org_price: 999.00, // 活动前价格
+              show_price_qi: false // 是否显示起
+          }
+        ]
+      }
+    ],
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数

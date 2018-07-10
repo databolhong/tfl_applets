@@ -1,9 +1,12 @@
 /**index.wxss**/
 page {
-  box-sizing: border-box;
+  /*overflow-y: hidden;*/
 }
 .container {
   padding-top: 90rpx;
+}
+.container-content {
+  width: 100%;
 }
 .header {
   position: fixed;
@@ -13,6 +16,7 @@ page {
   padding: 10rpx 0;
   box-shadow: 0 4rpx 3rpx rgba(0, 0, 0, .1);
   background-color: #ffffff;
+  z-index: 100;
 }
 .header-nav {
   font-size: 36rpx;
@@ -45,6 +49,7 @@ page {
 .items {
   width: 100%;
   overflow: hidden;
+  margin-top: 52rpx;
 }
 .items-title {
   width: 650rpx;
@@ -64,7 +69,7 @@ page {
 }
 .img-arrow-right {
   width: 14rpx;
-  height: 26rpx;
+  height: 24rpx;
   vertical-align: sub;
   padding-bottom: 4rpx;
 }
@@ -74,4 +79,17 @@ page {
   text-align: left;
   padding-left: 50rpx;
   font-size: 28rpx;
+}
+.scroll-nowrap {
+  margin-top: 24rpx;
+}
+.items-item-img {
+  width: 650rpx;
+  margin: 10rpx 0 10rpx 50rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 0 30rpx 0 rgba(0, 0, 0, .15);
+}
+.items-item-img image {
+  border-radius: 20rpx 20rpx 0 0;
+  width: 100%;
 }
