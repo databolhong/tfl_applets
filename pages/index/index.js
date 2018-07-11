@@ -13,6 +13,8 @@ Page({
         title: '泰康养老保险',
         description: '泰康 #全心为您',
         product_id: '',
+        w: 650,
+        h: 364,
         items: [
           {
             code: '123',
@@ -43,6 +45,8 @@ Page({
       {
         title: '好物',
         description: '网易严选 #好的生活没那么贵',
+        w: 650,
+        h: 642,
         items: [
           {
             code: '123',

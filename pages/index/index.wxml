@@ -3,7 +3,7 @@
   <view class='header box-flex'>
     <view class='flex message'><icon size="18" type="info"/></view>
     <view class='box-flex flex header-nav'>
-      <view bind:tap="navTap" data-nav="home" class="flex header-nav-view {{nav === 'index' ? 'header-nav-active' : ''}}">
+      <view bind:tap="navTap" data-nav="index" class="flex header-nav-view {{nav === 'index' ? 'header-nav-active' : ''}}">
         <view>首页</view>
         <view class="{{nav === 'index' ? 'header-nav-active-after' : ''}}"></view>
       </view>
@@ -14,7 +14,7 @@
     <view class='flex search'><icon size="18" type="search"/></view>
   </view>
   <view class="container-content">
-    <view class="items" wx:for="{{dataItems}}"  wx:for-item="items">
+    <!--<view class="items" wx:for="{{dataItems}}"  wx:for-item="items">
       <view class="items-title box-flex">
         <text class="items-title-text" >{{items.title}}</text>
         <view class="items-title-more">
@@ -23,15 +23,36 @@
       </view>
       <view class="items-title-description">{{items.description}}</view>
       <scroll-view scroll-x class="scroll-nowrap">
-        <view class="items-item-img box-inlineBlock" wx:for="{{items.items}}" wx:for-item="item">
+        <view wx:for="{{items.items}}" wx:for-item="item" class="items-item-img box-inlineBlock {{index === 0 ? 'first' : ''}} {{index === items.items.length - 1 ? 'last' : ''}}">
           <image lazy-load="{{true}}" mode="widthFix" src="{{item.img_url}}"></image>
-          <view>{{item.txt}}</view>
-          <view>
-            <text>{{item.price}} 元{{item.show_price_qi ? '起' : ''}}</text>
-            <view wx:if="{{item.org_price !== item.price}}">官方价：<text>{{item.org_price}}元</text></view>
+          <view class="product-txt">{{item.txt}}</view>
+          <view class="product-price box-flex">
+            <view class="price"><text class="price-num">{{item.price}}</text> 元{{item.show_price_qi ? '起' : ''}}</view>
+            <view wx:if="{{item.org_price !== item.price}}"> 官方价：<text class="org-price">{{item.org_price}}元</text></view>
           </view>
         </view>
       </scroll-view>
+    </view>-->
+    <view class="items" wx:for="{{dataItems}}"  wx:for-item="items">
+      <view class="items-title box-flex">
+        <text class="items-title-text" >{{items.title}}</text>
+        <view class="items-title-more">
+          <text>查看全部 </text><image class="img-arrow-right" mode="aspectFill" src="/images/arrow-right.png"></image>
+        </view>
+      </view>
+      <view class="items-title-description">{{items.description}}</view>
+      <swiper previous-margin="15" next-margin="20" style="height: {{items.h + 220}}rpx" circular="{{true}}" display-multiple-items="{{1}}">
+        <swiper-item wx:for="{{items.items}}" wx:for-item="item">
+          <view class="items-item-img box-inlineBlock">
+            <image lazy-load="{{true}}" mode="widthFix" src="{{item.img_url}}"></image>
+            <view class="product-txt">{{item.txt}}</view>
+            <view class="product-price box-flex">
+              <view class="price"><text class="price-num">{{item.price}}</text> 元{{item.show_price_qi ? '起' : ''}}</view>
+              <view wx:if="{{item.org_price !== item.price}}"> 官方价：<text class="org-price">{{item.org_price}}元</text></view>
+            </view>
+          </view>
+        </swiper-item>
+      </swiper>
     </view>
   </view>
 </view>
