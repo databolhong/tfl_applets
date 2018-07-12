@@ -77,16 +77,6 @@ Page({
     ],
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  //事件处理函数
-  navTap (event) {
-    console.log(event)
-    this.setData({
-      nav: event.currentTarget.dataset.nav
-    })
-    wx.showToast({
-      title: event.currentTarget.dataset.nav
-    })
-  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
@@ -114,6 +104,19 @@ Page({
         }
       })
     }
+  },
+    //事件处理函数
+  navTap (event) {
+    console.log(event)
+    this.setData({
+      nav: event.currentTarget.dataset.nav
+    })
+    wx.showModal({
+      // title: event.currentTarget.dataset.nav,
+      title: '提示',
+      content: event.currentTarget.dataset.nav,
+      showCancel: false
+    })
   },
   getUserInfo: function(e) {
     console.log(e)
