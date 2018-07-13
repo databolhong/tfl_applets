@@ -80,13 +80,11 @@ page {
   padding-left: 50rpx;
   font-size: 28rpx;
 }
-.scroll-nowrap {
-  margin-top: 14rpx;
-}
+/*
 .items-item-img {
   width: 650rpx;
   padding-bottom: 20rpx;
-  /*margin: 20rpx 0 20rpx 20rpx;*/
+  !*margin: 20rpx 0 20rpx 20rpx;*!
   margin: 20rpx;
   border-radius: 20rpx;
   box-shadow: 0 0 15rpx 0 rgba(0, 0, 0, .15);
@@ -129,4 +127,4 @@ page {
 }
 .org-price {
   text-decoration: line-through;
-}
+}*/

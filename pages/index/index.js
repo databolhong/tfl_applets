@@ -73,7 +73,42 @@ Page({
               show_price_qi: false // 是否显示起
           }
         ]
-      }
+      },
+      {
+          title: '豆瓣电影',
+          description: '我的精神角落',
+          w: 544,
+          h: 765,
+          items: [
+              {
+                  code: '123',
+                  txt: '《红海行动》',
+                  txt_dec: '不抛弃 不放弃',
+                  img_url: '/images/index/a3.png',
+                  price: 434.00, // 当前价格
+                  org_price: 999.00, // 活动前价格
+                  show_price_qi: false // 是否显示起
+              },
+              {
+                  code: '123',
+                  txt: '《红海行动》',
+                  txt_dec: '不抛弃 不放弃',
+                  img_url: '/images/index/a3.png',
+                  price: 434.00, // 当前价格
+                  org_price: 999.00, // 活动前价格
+                  show_price_qi: false // 是否显示起
+              },
+              {
+                  code: '123',
+                  txt: '《红海行动》',
+                  txt_dec: '不抛弃 不放弃',
+                  img_url: '/images/index/a3.png',
+                  price: 434.00, // 当前价格
+                  org_price: 999.00, // 活动前价格
+                  show_price_qi: false // 是否显示起
+              }
+          ]
+}
     ],
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },

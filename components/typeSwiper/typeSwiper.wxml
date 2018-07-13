@@ -1,5 +1,16 @@
 <template name="swiper-type1">
-
+    <swiper previous-margin="15" next-margin="20" style="height: {{items.h + 220}}rpx" circular="{{true}}" display-multiple-items="{{1}}">
+        <swiper-item wx:for="{{items.items}}" wx:for-item="item">
+            <view class="items-item-img box-inlineBlock">
+                <image lazy-load="{{true}}" mode="widthFix" src="{{item.img_url}}"></image>
+                <view class="product-txt">{{item.txt}}</view>
+                <view class="product-price box-flex">
+                    <view class="price"><text class="price-num">{{item.price}}</text> 元{{item.show_price_qi ? '起' : ''}}</view>
+                    <view wx:if="{{item.org_price !== item.price}}"> 官方价：<text class="org-price">{{item.org_price}}元</text></view>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
 </template>
 
 <template name="swiper-type2">
